@@ -89,7 +89,6 @@ def check_and_rotate_dns_record(record_to_update, new_ip):
                 removed = remove_dns_record(existing_record_name, existing_record_type, existing_record_ip)
                 if removed:
                     return add_dns_record(existing_record_name, existing_record_type, new_ip)
-
             else:
                 print('IP has not drifted, exiting')
     return False
