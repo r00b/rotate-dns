@@ -80,7 +80,7 @@ def check_and_rotate_dns_record(record_to_update, new_ip):
             return add_dns_record(record_to_update, 'A', new_ip)
         else:
             # rotate the record
-            print('Found record to update: ' + str(existing_record))
+            print('Found record to check: ' + str(existing_record))
             existing_record_name = existing_record['record']
             existing_record_type = existing_record['type']
             existing_record_ip = existing_record['value']
